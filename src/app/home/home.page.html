@@ -1,11 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -14,7 +6,129 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div id="output">
+      <p style="font-size: 2em">{{numbers}}</p>
+      <span style="font-size: 3.5em">{{result}}</span>
+    </div>
+    <div id="keyboard">
+      <ion-button
+        (click)="clear()"
+        class="wide-button"
+        color="danger"
+        shape="round"
+        size="large"
+        >C</ion-button
+      >
+      <ion-button
+        (click)="deleteDigit()"
+        color="light"
+        shape="round"
+        size="large"
+      >
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        (click)="addNumber('/')"
+        color="warning"
+        shape="round"
+        size="large"
+        >&divide;</ion-button
+      >
+      <ion-button
+        (click)="addNumber(7)"
+        color="light"
+        shape="round"
+        size="large"
+        >7</ion-button
+      >
+      <ion-button
+        (click)="addNumber(8)"
+        color="light"
+        shape="round"
+        size="large"
+        >8</ion-button
+      >
+      <ion-button
+        (click)="addNumber(9)"
+        color="light"
+        shape="round"
+        size="large"
+        >9</ion-button
+      >
+      <ion-button
+        (click)="addNumber('*')"
+        color="warning"
+        shape="round"
+        size="large"
+        >*</ion-button
+      >
+      <ion-button
+        (click)="addNumber(4)"
+        color="light"
+        shape="round"
+        size="large"
+        >4</ion-button
+      >
+      <ion-button
+        (click)="addNumber(5)"
+        color="light"
+        shape="round"
+        size="large"
+        >5</ion-button
+      >
+      <ion-button
+        (click)="addNumber(6)"
+        color="light"
+        shape="round"
+        size="large"
+        >6</ion-button
+      >
+      <ion-button
+        (click)="addNumber('-')"
+        color="warning"
+        shape="round"
+        size="large"
+        >-</ion-button
+      >
+      <ion-button
+        (click)="addNumber(1)"
+        color="light"
+        shape="round"
+        size="large"
+        >1</ion-button
+      >
+      <ion-button
+        (click)="addNumber(2)"
+        color="light"
+        shape="round"
+        size="large"
+        >2</ion-button
+      >
+      <ion-button
+        (click)="addNumber(3)"
+        color="light"
+        shape="round"
+        size="large"
+        >3</ion-button
+      >
+      <ion-button
+        (click)="addNumber('+')"
+        color="warning"
+        shape="round"
+        size="large"
+        >+</ion-button
+      >
+      <ion-button class="wide-button" color="light" shape="round" size="large"
+        >0</ion-button
+      >
+      <ion-button color="light" shape="round" size="large">.</ion-button>
+      <ion-button
+        (click)="calculate()"
+        color="warning"
+        shape="round"
+        size="large"
+        >=</ion-button
+      >
+    </div>
   </div>
 </ion-content>
